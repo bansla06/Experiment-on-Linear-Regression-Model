@@ -343,7 +343,9 @@ test_error = c()
      plot(train_f$sqft_living,train_f$price, pch=19, cex=1,col="green",
           main="Price vs Area of living ",
           xlab="Square feet", ylab="Price",sub = "All model")
-     
+     legend("topleft", legend=c("order-1","order-2","order-7","order-8","order-9","order-10"),
+           col=c("red", "black","orange","magenta","blue","violet"), lty=1:2, cex=0.8)
+        
      
      lines(sort(train_f$sqft_living), fitted(m11)[order(train_f$sqft_living)], 
            col='red', type='l')
